@@ -1,11 +1,11 @@
 <template>
-  <header>
+  <header class="bg-yellow-500 text-white">
     <slot name="header"></slot>
   </header>
-  <main>
+  <main class="bg-indigo-500 text-white">
     <slot></slot>
   </main>
-  <aside>
+  <aside class="bg-green-500 text-white">
     <slot name="sidebar"></slot>
   </aside>
 </template>
