@@ -20,6 +20,8 @@
     <AppIcon class="hidden" />
     <!-- Scoped slots providing data to parent -->
     <Library />
+    <!-- Binding an object -->
+    <VueLogo />
   </div>
 </template>
 
@@ -28,10 +30,11 @@ import BaseButton from "@/components/BaseButton.vue";
 import BlogLayout from "@/components/BlogLayout.vue";
 import AppIcon from "@/components/AppIcon.vue";
 import Library from "@/components/Library.vue";
+import VueLogo from "@/components/VueLogo.vue";
 
 export default {
   name: "App",
-  components: { BaseButton, AppIcon, BlogLayout, Library },
+  components: { BaseButton, AppIcon, BlogLayout, Library, VueLogo },
 };
 </script>
 
