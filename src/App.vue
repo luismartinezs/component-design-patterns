@@ -1,9 +1,10 @@
 <template>
   <div class="container mx-auto px-6">
-    <div class="flex flex-col">
+    <AppIcon class="hidden" />
+    <div class="flex">
+      <BaseButton />
       <BaseButton>
-        <AppIcon class="w-8 h-8 mr-2" />
-        Click me
+        Cancel
       </BaseButton>
     </div>
   </div>
