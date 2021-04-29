@@ -3,19 +3,29 @@
     class="flex items-center justify-center bg-blue-500 text-white font-bold text-lg p-4 rounded-md m-1"
     @click="handleClick"
   >
-    <LoadingSpinner v-if="isLoading" />
-    <div v-else class="flex items-center justify-center">
-      <!-- Slot based components are less complex than prop based -->
-      <slot></slot>
+    <div class="flex items-center justify-center">
+      <div v-if="showLeftIcon" class="mr-2">
+        <LoadingSpinner v-if="isLoading && spinnerSide === 'left'" />
+        <AppIcon v-else class="h-8 w-8" />
+      </div>
+
+      <span>{{ label }}</span>
+
+      <div v-if="showRightIcon" class="ml-2">
+        <LoadingSpinner v-if="isLoading && spinnerSide === 'right'" />
+        <AppIcon v-else class="h-8 w-8" />
+      </div>
     </div>
   </button>
 </template>
 
 <script>
+import AppIcon from "@/components/AppIcon.vue";
 import LoadingSpinner from "@/components/LoadingSpinner.vue";
 
 export default {
   components: {
+    AppIcon,
     LoadingSpinner,
   },
   data() {

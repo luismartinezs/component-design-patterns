@@ -1,22 +1,21 @@
 <template>
   <div class="container mx-auto px-6">
     <div class="flex flex-col">
-      <BaseButton />
-      <BaseButton label="Clicky" />
-      <BaseButton label="Clicky" :showIcon="true" />
-      <BaseButton label="Clicky" :showIcon="true" iconSide="left" />
-      <BaseButton label="Clicky" :showIcon="true" iconSide="both" />
-            <BaseButton label="Clicky" :showIcon="true" spinnerSide="right" />
-      <BaseButton label="Clicky" :showIcon="true" iconSide="left" spinnerSide="left"  />
+      <BaseButton>
+        <AppIcon class="w-8 h-8 mr-2" />
+        Click me
+      </BaseButton>
     </div>
   </div>
 </template>
 
 <script>
 import BaseButton from "@/components/BaseButton.vue";
+import AppIcon from "@/components/AppIcon.vue";
+
 export default {
   name: "App",
-  components: { BaseButton },
+  components: { BaseButton, AppIcon },
 };
 </script>
 
