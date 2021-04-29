@@ -1,5 +1,13 @@
 <template>
   <div class="container mx-auto px-6">
+    <!-- Slots and default slots -->
+    <div class="flex">
+      <BaseButton />
+      <BaseButton>
+        Cancel
+      </BaseButton>
+    </div>
+    <!-- Named slots -->
     <BlogLayout>
       <template #header>
         <h1>My header</h1>
@@ -10,12 +18,8 @@
       </template>
     </BlogLayout>
     <AppIcon class="hidden" />
-    <div class="flex">
-      <BaseButton />
-      <BaseButton>
-        Cancel
-      </BaseButton>
-    </div>
+    <!-- Scoped slots providing data to parent -->
+    <Library />
   </div>
 </template>
 
@@ -23,10 +27,11 @@
 import BaseButton from "@/components/BaseButton.vue";
 import BlogLayout from "@/components/BlogLayout.vue";
 import AppIcon from "@/components/AppIcon.vue";
+import Library from "@/components/Library.vue";
 
 export default {
   name: "App",
-  components: { BaseButton, AppIcon, BlogLayout },
+  components: { BaseButton, AppIcon, BlogLayout, Library },
 };
 </script>
 
