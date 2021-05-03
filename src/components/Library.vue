@@ -5,6 +5,9 @@
     <template #title="{ bookTitle }">
       <h1>{{ bookTitle }}</h1>
     </template>
+    <template #description="{bookDescription}">
+      <p>{{ bookDescription }}</p>
+    </template>
   </Book>
 </template>
 
